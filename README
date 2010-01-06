@@ -1,0 +1,42 @@
+Interfaces
+==========
+
+Ya know, like java and stuff, but it's lazy...more like informal objective-c protocols and stuff...but it's picky...
+
+Don't get all snotty on me, I know ruby isn't meant for this, but it makes classes more explanatory and facilitates better code (at least for me it does. Down with inheritance!  Who's with me?  How do i get out of these parenthesis?)
+
+
+Example
+=======
+
+class Faulknerish < Interface
+  def suicidal_thought(); end
+  def run_on_sentence(); end
+end
+
+class ReadMe < ActiveRecord::Base
+  implements :faulknerish
+  
+  def run_on_sentence()
+    puts("From a little after two oclock until almost sundown of the long still hot weary dead September afternoon they sat in what Miss Coldfield still called the office because her father had called it that-a dim hot airless room with the blinds all closed and fastened for forty-three summers because when she was a girl someone had believed that light and moving air carried heat and that dark was always cooler, and which (as the sun shone fuller and fuller on that side of the house) became latticed with yellow slashes full of dust motes which Quentin thought of as being flecks of the dead old dried paint itself blown inward from the scaling blinds as wind might have blown them")
+  end
+
+end
+
+>> ReadMe.interfaces
+=> [Faulknerish]
+
+>> Faulknerish.implementers
+=> [ReadMe]
+
+>> @read_me = ReadMe.new
+=> #<ReadMe:0x1015d8778>
+
+>> @read_me.run_on_sentence
+=> "From a little..."
+
+>> @read_me.suicidal_thought
+=> Interface::ImplementationError: Faulknerish requires that #<ReadMe:0x1015d8778> implement suicidal_thought
+
+
+Copyright (c) 2010 rescue => Rangers, released under the MIT license

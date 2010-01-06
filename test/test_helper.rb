@@ -1,0 +1,7 @@
+require 'rubygems'
+require 'active_support'
+require 'active_support/test_case'
+require 'test/unit'
+require 'test/unit/testcase'
+require 'interface'
+require 'implementer'
